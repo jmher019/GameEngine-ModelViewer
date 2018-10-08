@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{94FE3952-49D5-42DA-BF9A-750DC554708F}</ProjectGuid>
+    <RootNamespace>ModelViewer</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\src\include;$(ProjectDir)..\lib\ui-components\lib\event-system\dist\include;$(ProjectDir)..\lib\ui-components\lib\scene-graph\lib\glad\include;$(ProjectDir)..\lib\glfw-3.2.1\x86\include;$(ProjectDir)..\lib\ui-components\lib\scene-graph\dist\include;$(ProjectDir)..\lib\ui-components\lib\scene-graph\lib\glm-0.9.9.0\glm;$(ProjectDir)..\lib\ui-components\dist\include;$(ProjectDir)..\lib\ui-components\lib\FreeType\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\lib\opengl\x86;$(ProjectDir)..\lib\glfw-3.2.1\x86\lib-vc2015;$(ProjectDir)..\lib\ui-components\lib\scene-graph\dist\lib\x86\Debug;$(ProjectDir)..\lib\ui-components\lib\event-system\dist\lib\x86\Debug;$(ProjectDir)..\lib\ui-components\dist\lib\x86\Debug;$(ProjectDir)..\lib\ui-components\lib\FreeType\lib\x86\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <Link>
+      <AdditionalDependencies>glfw3dll.lib;OpenGL32.lib;SceneGraph.lib;EventSystem.lib;UIComponents.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\src\include;$(ProjectDir)..\lib\ui-components\lib\event-system\dist\include;$(ProjectDir)..\lib\ui-components\lib\scene-graph\lib\glad\include;$(ProjectDir)..\lib\glfw-3.2.1\x64\include;$(ProjectDir)..\lib\ui-components\lib\scene-graph\dist\include;$(ProjectDir)..\lib\ui-components\lib\scene-graph\lib\glm-0.9.9.0\glm;$(ProjectDir)..\lib\ui-components\dist\include;$(ProjectDir)..\lib\ui-components\lib\FreeType\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\lib\opengl\x64;$(ProjectDir)..\lib\glfw-3.2.1\x64\lib-vc2015;$(ProjectDir)..\lib\ui-components\lib\scene-graph\dist\lib\x64\Debug;$(ProjectDir)..\lib\ui-components\lib\event-system\dist\lib\x64\Debug;$(ProjectDir)..\lib\ui-components\dist\lib\x64\Debug;$(ProjectDir)..\lib\ui-components\lib\FreeType\lib\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <Link>
+      <AdditionalDependencies>glfw3dll.lib;OpenGL32.lib;SceneGraph.lib;EventSystem.lib;UIComponents.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\src\include;$(ProjectDir)..\lib\ui-components\lib\event-system\dist\include;$(ProjectDir)..\lib\ui-components\lib\scene-graph\lib\glad\include;$(ProjectDir)..\lib\glfw-3.2.1\x86\include;$(ProjectDir)..\lib\ui-components\lib\scene-graph\dist\include;$(ProjectDir)..\lib\ui-components\lib\scene-graph\lib\glm-0.9.9.0\glm;$(ProjectDir)..\lib\ui-components\dist\include;$(ProjectDir)..\lib\ui-components\lib\FreeType\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\lib\opengl\x86;$(ProjectDir)..\lib\glfw-3.2.1\x86\lib-vc2015;$(ProjectDir)..\lib\ui-components\lib\scene-graph\lib\x86\Release;$(ProjectDir)..\lib\ui-components\lib\event-system\lib\x86\Release;$(ProjectDir)..\lib\ui-components\dist\lib\x86\Release;$(ProjectDir)..\lib\ui-components\lib\FreeType\lib\x86\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;OpenGL32.lib;SceneGraph.lib;EventSystem.lib;UIComponents.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\src\include;$(ProjectDir)..\lib\ui-components\lib\event-system\dist\include;$(ProjectDir)..\lib\ui-components\lib\scene-graph\lib\glad\include;$(ProjectDir)..\lib\glfw-3.2.1\x64\include;$(ProjectDir)..\lib\ui-components\lib\scene-graph\dist\include;$(ProjectDir)..\lib\ui-components\lib\scene-graph\lib\glm-0.9.9.0\glm;$(ProjectDir)..\lib\ui-components\dist\include;$(ProjectDir)..\lib\ui-components\lib\FreeType\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\lib\opengl\x64;$(ProjectDir)..\lib\glfw-3.2.1\x64\lib-vc2015;$(ProjectDir)..\lib\ui-components\lib\scene-graph\dist\lib\x64\Release;$(ProjectDir)..\lib\ui-components\lib\event-system\dist\lib\x64\Release;$(ProjectDir)..\lib\ui-components\dist\lib\x64\Release;$(ProjectDir)..\lib\ui-components\lib\FreeType\lib\x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;OpenGL32.lib;SceneGraph.lib;EventSystem.lib;UIComponents.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\sources\main.cpp" />
+    <ClCompile Include="..\src\sources\MeshFactory.cpp" />
+    <ClCompile Include="..\src\sources\ModelViewer.cpp" />
+    <ClCompile Include="..\src\sources\OBJLoader.cpp" />
+    <ClCompile Include="..\src\sources\ShaderFactory.cpp" />
+    <ClCompile Include="..\src\sources\StringUtils.cpp" />
+    <ClCompile Include="..\src\sources\Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\include\MeshConstants.hpp" />
+    <ClInclude Include="..\src\include\MeshFactory.hpp" />
+    <ClInclude Include="..\src\include\MeshLoader.hpp" />
+    <ClInclude Include="..\src\include\ModelViewer.hpp" />
+    <ClInclude Include="..\src\include\OBJLoader.hpp" />
+    <ClInclude Include="..\src\include\ShaderConstants.hpp" />
+    <ClInclude Include="..\src\include\ShaderFactory.hpp" />
+    <ClInclude Include="..\src\include\StringUtils.hpp" />
+    <ClInclude Include="..\src\include\Window.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
